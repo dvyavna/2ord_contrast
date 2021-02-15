@@ -1,0 +1,10 @@
+opencv_python==4.0.0.21
+photutils==0.4.1
+matplotlib==2.1.1
+PsychoPy==1.85.3
+scikit_image==0.14.5
+imageio==2.4.1
+scipy==0.19.1
+numpy==1.13.3
+Pillow==8.1.0
+skimage==0.0
