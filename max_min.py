@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python2
 # -*- coding: utf-8 -*-
 import matplotlib.pyplot as plt
 import numpy as np
@@ -183,8 +183,8 @@ def find_points(fname,l):
     #Печатается таблица!
     #print(coordinates_max)
     #Next two lines are for Python2 or 3
-    #coordinates_max=np.asarray(map(list, zip(*[coordinates_max['y_peak'],coordinates_max['x_peak'],coordinates_max['peak_value']])))
-    coordinates_max=np.asarray(list(zip(*[coordinates_max['y_peak'],coordinates_max['x_peak'],coordinates_max['peak_value']])))
+    coordinates_max=np.asarray(map(list, zip(*[coordinates_max['y_peak'],coordinates_max['x_peak'],coordinates_max['peak_value']])))
+    #coordinates_max=np.asarray(list(zip(*[coordinates_max['y_peak'],coordinates_max['x_peak'],coordinates_max['peak_value']])))
     #Меняем порядок сортировки
     #print('crd_max',coordinates_max)
     coordinates_max=np.flip(coordinates_max,0)
@@ -381,7 +381,7 @@ transp_mask=np.logical_not(transp_mask[mask_border_offset:1280-mask_border_offse
 #print transp_mask.shape
 #exit(0)
 
-ave_brightness=np.mean(127.)
+ave_brightness=mymisc.GammaDecode(127) #np.mean()
 img-=ave_brightness
 #print 'np.mean(img)',np.mean(img)
 
